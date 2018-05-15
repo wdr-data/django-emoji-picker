@@ -11,8 +11,7 @@
 .dep-button {
     position: absolute;
     right: .5rem;
-    top: 50%;
-    margin-top: -0.5em;
-    height: 1em;
+    top: .5rem;
+    height: 1rem;
     color: gray;
 }
