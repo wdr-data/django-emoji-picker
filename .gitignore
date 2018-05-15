@@ -1,2 +1,2 @@
-node_modules
-dist
+node_modules/
+/emoji_picker/static/emoji_picker/
