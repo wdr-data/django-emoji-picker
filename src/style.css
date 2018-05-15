@@ -1,0 +1,23 @@
+.dep-panel {
+    display: none;
+    position: absolute;
+}
+
+.dep-container {
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+}
+
+.dep-button {
+    position: absolute;
+    right: .5rem;
+    top: 50%;
+    margin-top: -0.5em;
+    height: 1em;
+    color: gray;
+}
+
+html, body {
+    min-height: 100%;
+}
