@@ -1,6 +1,6 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { Picker } from 'emoji-mart'
+import React from 'react';
+import { render } from 'react-dom';
+import { Picker } from 'emoji-mart';
 
 let panelOpen = false;
 let currentField;
