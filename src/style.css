@@ -6,7 +6,6 @@
 .dep-container {
     position: relative;
     display: inline-block;
-    font-size: 2em;
 }
 
 .dep-button {
@@ -16,8 +15,4 @@
     margin-top: -0.5em;
     height: 1em;
     color: gray;
-}
-
-html, body {
-    min-height: 100%;
 }
