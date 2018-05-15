@@ -7,7 +7,7 @@ let currentField;
 let currentButton;
 
 const picker = React.createElement(Picker, {
-  set: 'messenger',
+  set: 'emojione',
   autofocus: true,
   onSelect: (emoji) => {
     if (!currentField) return;
