@@ -40,8 +40,8 @@ document.querySelectorAll('.dep-button').forEach(
   (elem) => {
     elem.addEventListener('click', (e) => {
       const {left, bottom} = e.target.getBoundingClientRect();
-      panel.style.top = `${bottom + 5}px`;
-      panel.style.left = `${left}px`;
+      panel.style.top = `${window.scrollY + bottom + 5}px`;
+      panel.style.left = `${window.scrollX + left}px`;
       panel.style.display = 'block';
 
       setTimeout(() => panelOpen = true);
