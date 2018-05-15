@@ -11,7 +11,6 @@ const picker = React.createElement(Picker, {
   autofocus: true,
   onSelect: (emoji) => {
     if (!currentField) return;
-    console.log(currentField);
 
     const from = currentField.selectionStart;
     const to = currentField.selectionEnd;
