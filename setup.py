@@ -13,6 +13,9 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 requirements = [str(r.req) for r in
                 parse_requirements('requirements.txt', session=False)]
 
+with open('README.md', 'r') as readme:
+    long_description = readme.read()
+
 setup(
     name='django-emoji-picker',
     version='0.0.1',
@@ -20,10 +23,13 @@ setup(
     install_requires=requirements,
     include_package_data=True,
     license='MIT License',
-    description='Django Widgets text inputs and textareas with emoji picker',
+    description='Django app providing text input and textarea widgets with emoji picker',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     url='https://github.com/wdr-data/django-emoji-picker',
     author='Hacking Studio',
     author_email='hello@hacking.studio',
+    keywords='django emoji widget',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
