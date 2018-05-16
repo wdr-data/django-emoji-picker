@@ -2,6 +2,9 @@
 Django app providing text input and textarea widgets with emoji picker.
 It's based on [emoji-mart](https://github.com/missive/emoji-mart).
 
+## Screenshot
+![Screenshot](https://user-images.githubusercontent.com/3945220/40110572-9c6be100-5900-11e8-85a1-63bf21a9a646.png)
+
 ## Usage
 This package contains a Django app that provides two widgets:
 
