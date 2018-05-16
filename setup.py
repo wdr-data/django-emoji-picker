@@ -1,13 +1,23 @@
 import os
 from setuptools import find_packages, setup
 
+try: # for pip >= 10
+    from pip._internal.req import parse_requirements
+except ImportError: # for pip <= 9.0.3
+    from pip.req import parse_requirements
+
+
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
+
+requirements = [str(r.req) for r in
+                parse_requirements('requirements.txt', session=False)]
 
 setup(
     name='django-emoji-picker',
     version='0.0.1',
     packages=find_packages(),
+    install_requires=requirements,
     include_package_data=True,
     license='MIT License',
     description='Django Widgets text inputs and textareas with emoji picker',
