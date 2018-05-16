@@ -1,2 +1,6 @@
 node_modules/
 /emoji_picker/static/emoji_picker/
+
+dist/
+build/
+django_emoji_picker.egg-info
