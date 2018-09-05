@@ -1,6 +1,6 @@
 {
   "name": "django-emoji-picker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Django Widgets text inputs and textareas with emoji picker",
   "main": "src/index.js",
   "repository": "https://github.com/wdr-data/django-emoji-picker",
