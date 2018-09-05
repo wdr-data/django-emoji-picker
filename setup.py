@@ -18,7 +18,7 @@ with open('README.md', 'r') as readme:
 
 setup(
     name='django-emoji-picker',
-    version='0.0.2',
+    version='0.0.3',
     packages=find_packages(),
     install_requires=requirements,
     include_package_data=True,
