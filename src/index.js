@@ -37,18 +37,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.body.addEventListener('click', clickHandler, true);
 
-  document.querySelectorAll('.dep-button').forEach(
-    (elem) => {
-      elem.addEventListener('click', (e) => {
-        const {left, bottom} = e.target.getBoundingClientRect();
-        panel.style.top = `${window.scrollY + bottom + 5}px`;
-        panel.style.left = `${window.scrollX + left}px`;
-        panel.style.display = 'block';
+  const initButtons = () => {
+    document.querySelectorAll('.dep-button').forEach(
+      (elem) => {
+        if (elem.dep_init) {
+          return;
+        }
 
-        setTimeout(() => panelOpen = true);
-        currentField = e.currentTarget.parentNode.firstElementChild;
-        currentButton = e.currentTarget;
-      });
-    }
-  );
+        elem.addEventListener('click', (e) => {
+          const {left, bottom} = e.target.getBoundingClientRect();
+          panel.style.top = `${window.scrollY + bottom + 5}px`;
+          panel.style.left = `${window.scrollX + left}px`;
+          panel.style.display = 'block';
+
+          setTimeout(() => panelOpen = true);
+          currentField = e.currentTarget.parentNode.firstElementChild;
+          currentButton = e.currentTarget;
+          elem.dep_init = true;
+        });
+      }
+    );
+  }
+
+  initButtons();
+
+  document.querySelectorAll('.add-row > a').forEach((elem) => {
+    elem.addEventListener('click', (e) => {
+      initButtons();
+    });
+  });
 });
