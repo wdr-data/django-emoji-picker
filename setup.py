@@ -18,7 +18,7 @@ with open('README.md', 'r') as readme:
 
 setup(
     name='django-emoji-picker',
-    version='0.0.3',
+    version='0.0.4',
     packages=find_packages(),
     install_requires=requirements,
     include_package_data=True,
@@ -40,6 +40,7 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
