@@ -34,12 +34,12 @@ INSTALLED_APPS = [
 
 #### `<app>/admin/<model>.py` (for use with Django Admin)
 ```python
-from emoji_picker.widgets import EmojiPickerTextInput, EmojiPickerTextarea
+from emoji_picker.widgets import EmojiPickerTextInputAdmin, EmojiPickerTextareaAdmin
 
 
 class YourModelForm(forms.ModelForm):
-    short_text = forms.CharField(widget=EmojiPickerTextInput)
-    long_text = forms.CharField(widget=EmojiPickerTextarea)
+    short_text = forms.CharField(widget=EmojiPickerTextInputAdmin)
+    long_text = forms.CharField(widget=EmojiPickerTextareaAdmin)
 ```
 
 ### Building from source
