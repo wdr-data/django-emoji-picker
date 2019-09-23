@@ -10,7 +10,7 @@
 
 .dep-button {
     position: absolute;
-    right: .5rem;
+    right: -1.5rem;
     top: .5rem;
     height: 1rem;
     color: gray;
