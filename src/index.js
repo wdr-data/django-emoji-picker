@@ -61,9 +61,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initButtons();
 
-  document.querySelectorAll('.add-row > a').forEach((elem) => {
-    elem.addEventListener('click', (e) => {
-      initButtons();
-    });
-  });
+  /*
+  Delay this to the end of the DOMContentLoaded event, so it takes place 
+  after the inline formsets have been set up by Django
+  */
+  window.setTimeout(
+    () => {
+      document.querySelectorAll('.add-row > a').forEach((elem) => {
+        elem.addEventListener('click', (e) => {
+          initButtons();
+        });
+      })
+    },
+    0
+  );
+
 });
